@@ -8,11 +8,12 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Goal
 
-- Feature 02 (TBD per feature specs)
+- Feature 03 (TBD per feature specs)
 
 ## Completed
 
 - Feature 01: Design System — shadcn/ui configured (components.json, Tailwind v4, dark-only theme), 7 UI primitives installed (Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea), lucide-react installed, lib/utils.ts with cn() helper created, globals.css with full design token system. TypeScript clean (tsc --noEmit passes).
+- Feature 02: Editor Chrome — `EditorNavbar` (fixed top bar, sidebar toggle with PanelLeftOpen/PanelLeftClose, left/center/right layout), `ProjectSidebar` (floating overlay, slide-in from left, Projects header + close button, My Projects/Shared tabs with empty states, New Project button), and `EditorDialog` (reusable wrapper over shadcn Dialog with rounded-3xl, bg-elevated, project token styling; supports title, description, footer). TypeScript clean.
 
 ## In Progress
 
@@ -20,7 +21,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Next Up
 
-- Feature 02 (TBD per feature specs)
+- Feature 03 (TBD per feature specs)
 
 ## Open Questions
 

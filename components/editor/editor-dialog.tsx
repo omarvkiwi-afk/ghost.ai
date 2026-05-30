@@ -27,7 +27,10 @@ export function EditorDialog({
 }: EditorDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-elevated border border-surface-border rounded-3xl max-w-md">
+      <DialogContent
+        className="border border-surface-border rounded-3xl max-w-md"
+        style={{ backgroundColor: "var(--bg-elevated)" }}
+      >
         <DialogHeader>
           <DialogTitle className="text-copy-primary">{title}</DialogTitle>
           {description && (

@@ -12,8 +12,12 @@ interface ProjectSidebarProps {
 export function ProjectSidebar({ isOpen, onClose }: ProjectSidebarProps) {
   return (
     <aside
-      className="fixed top-0 left-0 h-full w-72 z-50 flex flex-col bg-elevated backdrop-blur-sm border-r border-surface-border"
+      className="absolute left-0 z-50 flex flex-col border-r border-surface-border"
       style={{
+        top: 0,
+        bottom: 0,
+        width: "18rem",
+        backgroundColor: "var(--bg-elevated)",
         transform: isOpen ? "translateX(0)" : "translateX(-100%)",
         transition: "transform 300ms ease-in-out",
       }}
@@ -24,7 +28,7 @@ export function ProjectSidebar({ isOpen, onClose }: ProjectSidebarProps) {
           variant="ghost"
           size="icon"
           onClick={onClose}
-          className="h-8 w-8 text-copy-muted hover:text-copy-primary hover:bg-subtle"
+          className="h-8 w-8 text-copy-muted hover:text-copy-primary hover:bg-[var(--bg-subtle)]"
         >
           <X className="h-4 w-4" />
         </Button>
@@ -32,7 +36,7 @@ export function ProjectSidebar({ isOpen, onClose }: ProjectSidebarProps) {
 
       <div className="flex flex-col flex-1 overflow-hidden p-4">
         <Tabs defaultValue="my-projects" className="flex flex-col flex-1">
-          <TabsList className="w-full bg-subtle">
+          <TabsList className="w-full" style={{ backgroundColor: "var(--bg-subtle)" }}>
             <TabsTrigger value="my-projects" className="flex-1 text-xs">
               My Projects
             </TabsTrigger>

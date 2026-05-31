@@ -14,6 +14,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 - Feature 01: Design System — shadcn/ui configured (components.json, Tailwind v4, dark-only theme), 7 UI primitives installed (Button, Card, Dialog, Input, Tabs, Textarea, ScrollArea), lucide-react installed, lib/utils.ts with cn() helper created, globals.css with full design token system. TypeScript clean (tsc --noEmit passes).
 - Feature 02: Editor Chrome — `EditorNavbar` (fixed top bar, sidebar toggle with PanelLeftOpen/PanelLeftClose, left/center/right layout), `ProjectSidebar` (floating overlay, slide-in from left, Projects header + close button, My Projects/Shared tabs with empty states, New Project button), and `EditorDialog` (reusable wrapper over shadcn Dialog with rounded-3xl, bg-elevated, project token styling; supports title, description, footer). TypeScript clean.
+- Feature 04: Project Dialogs & Editor Home — editor home (heading + description + New Project button), `useProjectDialogs` hook (dialog/form/loading state), Create/Rename/Delete dialogs via `EditorDialog`, sidebar project list with hover-reveal rename/delete actions (owned only; shared projects show no actions), mobile backdrop scrim in `EditorShell`, `ProjectDialogContext` to bridge editor page → shell. TypeScript clean.
 - Feature 03: Auth — `@clerk/ui` installed; `ClerkProvider` with `dark` theme and CSS variable overrides wraps root layout; `proxy.ts` (Next.js v16 replacement for middleware.ts) uses `clerkMiddleware` + `createRouteMatcher` to protect all routes except sign-in/sign-up paths derived from env vars; sign-in (`/sign-in/[[...sign-in]]`) and sign-up (`/sign-up/[[...sign-up]]`) pages with two-panel layout (left: logo/tagline/features, hidden on mobile; right: Clerk form); root `/` redirects authenticated users to `/editor` and unauthenticated to `/sign-in`; `UserButton` added to editor navbar right section. Build passes clean. Sidebar, navbar, and dialog fixed for Tailwind v4 JIT miss on `bg-elevated`, `bg-subtle`, `w-72`, `w-48`, `inset-y-0` — replaced with inline styles using `:root` CSS variables (see Architecture Decisions).
 
 ## In Progress
@@ -22,7 +23,7 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Next Up
 
-- Feature 04 (TBD per feature specs)
+- Feature 05 (TBD per feature specs)
 
 ## Open Questions
 
